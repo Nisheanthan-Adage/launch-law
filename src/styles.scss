@@ -1,1 +1,72 @@
+// Custom Theming for Launch Law by Adage Digitals using Angular Material
+@use '@angular/material' as mat;
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+@include mat.core();
+
+$brand-color-palette: (
+  50: #f3e0d8,
+  100: #edd0c5,
+  200: #e7c1b1,
+  300: #e0b19e,
+  400: #daa18b,
+  500: #d69c85,
+  600: #d49277,
+  700: #ce8264,
+  800: #c87251,
+  900: #c2633d,
+  A100: #e7c1b1,
+  A200: #daa18b,
+  A400: #d69c85,
+  A700: #ce8264,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: white,
+    A700: white,
+  ));
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$fe-repo-primary: mat.define-palette(mat.$indigo-palette);
+$fe-repo-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$fe-repo-brand: mat.define-palette($brand-color-palette, 500, 200, 600);
+
+// The warn palette is optional (defaults to red).
+$fe-repo-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$fe-repo-theme: mat.define-light-theme((
+  color: (
+    primary: $fe-repo-brand,
+    accent: $fe-repo-accent,
+    warn: $fe-repo-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($fe-repo-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; width: auto;}
+* {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}

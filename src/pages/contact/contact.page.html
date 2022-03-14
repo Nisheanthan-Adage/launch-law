@@ -1,0 +1,74 @@
+<div class="contact-page">
+  <div class="left-container">
+    <p class="title"><span>CONTACT</span></p>
+    <h1 class="any-question-text">Any Questions?</h1>
+    <h1 class="lets-talk-text">Let's Talk!</h1>
+    <p class="content-text">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries
+    </p>
+    <div class="icon-text">
+      <img src="assets/icon/location.png">
+      <span>Lorel Ipsum is simply dummy</span>
+    </div>
+    <div class="icon-text">
+      <img src="assets/icon/mail.png">
+      <span>Sample@gmail.com</span>
+    </div>
+    <div class="icon-text">
+      <img src="assets/icon/telephone.png">
+      <span id="mobile-number">07712341235</span>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <form class="contact-form">
+      <div class="form-row">
+        <div class="form-field">
+          <mat-label>First Name</mat-label>
+          <mat-form-field appearance="outline">
+            <input matInput>
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+          <mat-label>Last Name</mat-label>
+          <mat-form-field appearance="outline">
+            <input matInput>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <mat-label>Email Address</mat-label>
+          <mat-form-field appearance="outline">
+            <input matInput>
+          </mat-form-field>
+        </div>
+        <div class="form-field">
+          <mat-label>Phone Number</mat-label>
+          <mat-form-field appearance="outline">
+            <input matInput>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field" id="detail-field">
+          <mat-label>Case Details</mat-label>
+          <mat-form-field appearance="outline">
+            <textarea matInput></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <button
+        mat-flat-button
+        color="primary"
+        class="send-btn"
+        (click)="handleSendYourCase($event)"
+      >
+        SEND YOUR CASE
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<mat-toolbar>
+  <button mat-icon-button aria-label="icon-button with menu icon" [matMenuTriggerFor]="afterMenu">
+    <img class="menu-icon" src="assets/icon/hamburger-menu.png" alt="menu icon">
+  </button>
+  <mat-menu #afterMenu="matMenu" xPosition="after">
+    <a href='/web#home' mat-menu-item>Home</a>
+    <a href='/web#about-us' mat-menu-item>About Us</a>
+    <a href='/web#service' mat-menu-item>Service</a>
+    <a href='/web#our-team' mat-menu-item>Our Team</a>
+    <a href='/web#contact' mat-menu-item>Contact Us</a>
+    <a href='/web#testimonial' mat-menu-item>Testimonials</a>
+  </mat-menu>
+</mat-toolbar>

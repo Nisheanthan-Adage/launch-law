@@ -1,0 +1,34 @@
+<div class="testimonial-page">
+   <div class="header">
+    <p class="client-testimonial-text"><span>CLIENT TESTIMONIALS</span></p>
+    <h1 class="our-clients-say-text">What Our Clients Say</h1>
+    <p class="content-text">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries
+    </p>
+  </div>
+
+  <div class="carousel-container">
+    <div class="nav-icon" (click)="slidePrev()">
+      <img src="assets/icon/left-carousal.png" alt="left carousal icon">
+    </div>
+    <swiper #swiper [config]="customSlideConfig" [virtual]="true" class="carousal-content">
+      <ng-template swiperSlide *ngFor="let slide of slidesStore">
+        <div class="slider">
+          <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
+          <div class="slider-content">
+            <div>{{slide.testimonial}}</div>
+            <!-- below span is used to make a line -->
+            <p><span></span></p>
+            <span>{{slide.title}}</span>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+    <div class="nav-icon" (click)="slideNext()">
+      <img style="right: 0px;" src="assets/icon/right-carousal.png" alt="right carousal icon">
+    </div>
+  </div>
+</div>

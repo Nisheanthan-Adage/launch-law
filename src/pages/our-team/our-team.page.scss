@@ -1,0 +1,232 @@
+.our-team-page {
+  height: 100vh;
+  padding: 20px;
+
+  .team-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+    .title {
+      width: 25%;
+
+      .our-team-text {
+        color: #e3baab;
+        margin: 0 0 30px 30px;
+        line-height: 0.2;
+        width: 400px;
+
+        span {
+          display: inline;
+          position: relative;
+        }
+
+        span::before {
+          content: "";
+          position: absolute;
+          height: 5px;
+          border-top: 2px solid #a196ab;
+          width: 25px;
+          right: 100%;
+          margin-right: 5px;
+        }
+      }
+
+      .top-attorneys-text {
+        font-weight: 700;
+        font-size: 40px;
+        font-family: 'Playfair Display', serif;
+      }
+    }
+
+    .content-text {
+      width: 40%;
+      font-weight: 400;
+      color: #ababae;
+    }
+
+    .view-more {
+      width: 25%;
+      display: flex;
+      align-self: center;
+      justify-content: flex-end;
+
+      .view-more-text {
+        color: #e3baab;
+        align-self: center;
+        margin-right: 20px;
+        margin-bottom: 0px;
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .team-members-row {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height: 60%;
+
+    .member {
+      display: flex;
+      flex: 1 0 21%;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin: 10px;
+      width: 24%;
+      height: 30vw;
+
+      .image-container {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          align-self: center;
+          width: 80%;
+          border: 1px solid black;
+          background-color: white;
+          z-index: 9;
+          position: relative;
+          top: 28vw;
+          left: 10%;
+
+          .name {
+            color: #e3baab;
+            margin: 0px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+          }
+
+          .profession {
+            margin: 0px;
+            font-weight: 400;
+            font-size: 15px;
+            font-family: 'Playfair Display', serif;
+          }
+        }
+      }
+    }
+
+    .member:hover .image-container {
+      filter: brightness(80%) saturate(140%);
+
+      .info {
+        top: 26vw;
+      }
+    }
+
+    .member:hover .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .social-icon {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+      }
+    }
+
+    .social-links {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .our-team-page {
+    .team-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .title {
+        width: 75%;
+      }
+
+      .content-text {
+        width: 80%;
+      }
+
+      .view-more {
+        display: flex;
+        align-self: end;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .our-team-page {
+    height: auto;
+
+    .team-members-row {
+      display: flex;
+      flex-wrap: wrap;
+
+      .member {
+        flex: 1 0 41%;
+        margin-bottom: 60px;
+        height: 50vw;
+
+        .image-container {
+          position: relative;
+
+          .info {
+            top: 48vw;
+          }
+        }
+      }
+
+      .member:hover .image-container {
+        .info {
+          top: 46vw;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .our-team-page {
+    height: auto;
+    overflow: hidden;
+
+    .team-members-row {
+      display: flex;
+      flex-wrap: wrap;
+
+      .member {
+        flex: 1 0 81%;
+        height: 100vw;
+
+        .image-container {
+          position: relative;
+
+          .info {
+            position: relative;
+            top: 94vw;
+          }
+        }
+      }
+
+      .member:hover .image-container {
+        .info {
+          top: 92vw;
+        }
+      }
+    }
+  }
+}
+

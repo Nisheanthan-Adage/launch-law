@@ -1,0 +1,68 @@
+.top-toolbar {
+  background-color: white;
+  width: 100%;
+
+  .logo {
+    margin: auto;
+    width: 20%;
+    min-width: 250px;
+    height: 100%;
+  }
+
+  .flex-spacer {
+    flex: 1 1 auto;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .telephone-icon {
+      margin: auto;
+      height: 30px;
+      width: 30px;
+    }
+
+    .mobile-number {
+      margin: 0px 20px;
+      // font-family: 'Playfair Display', serif;
+      color: #6c6f82;
+    }
+
+    // button {
+    //   font-family: 'Playfair Display', serif;
+    // }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .top-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+
+    .logo {
+      width: 100%;
+      height: 80px;
+    }
+
+    .contact {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .telephone-icon {
+        margin: auto 0px;
+      }
+
+      button {
+        margin: 10px 0px;
+      }
+    }
+  }
+}
+
+
