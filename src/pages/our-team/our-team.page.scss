@@ -79,7 +79,7 @@
       justify-content: flex-end;
       margin: 10px;
       width: 24%;
-      height: 30vw;
+      height: 27vw;
 
       .image-container {
         width: 100%;
@@ -98,7 +98,7 @@
           background-color: white;
           z-index: 9;
           position: relative;
-          top: 28vw;
+          top: 25vw;
           left: 10%;
 
           .name {
@@ -122,7 +122,7 @@
       filter: brightness(80%) saturate(140%);
 
       .info {
-        top: 26vw;
+        top: 24vw;
       }
     }
 
@@ -229,4 +229,3 @@
     }
   }
 }
-

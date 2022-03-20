@@ -42,7 +42,7 @@
 
         .creative-text {
           color: #efd6cc;
-          font-size: 5vw;
+          font-size: 3.5vw;
           line-height: 1.1;
           margin-bottom: 30px;
           font-family: 'Playfair Display', serif;
@@ -51,7 +51,7 @@
 
         .we-help-text {
           color: white;
-          font-size: 3.5vw;
+          font-size: 1.5vw;
           line-height: 1.1;
           margin-bottom: 30px;
           font-family: 'Playfair Display', serif;
@@ -93,12 +93,41 @@
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  .home-page {
+
+    .background {
+      .container {
+        .text-area {
+          .creative-text {
+            font-size: 4.5vw;
+          }
+
+          .we-help-text {
+            font-size: 2.5vw;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .home-page {
 
     .background {
       .container {
         flex-direction: column;
+
+        .text-area {
+          .creative-text {
+            font-size: 5.5vw;
+          }
+
+          .we-help-text {
+            font-size: 3.5vw;
+          }
+        }
 
         .social-media-icon-area {
           position: relative;
